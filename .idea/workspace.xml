@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78c55a11-4988-40f3-9fd9-ef862b4a38ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -46,13 +45,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="677" />
+          <entry key="java" value="734" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="677" />
+          <entry key="JAVA" value="734" />
           <entry key="JSON" value="1" />
         </counts>
       </usages-collector>
@@ -62,19 +61,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="99" column="46" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="387">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -501,8 +494,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/mappings/Drivers2016.json" />
         <option value="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises3Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises4Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java" />
       </list>
     </option>
   </component>
@@ -610,7 +603,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532953095680" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532953805528" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -627,7 +620,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz">
+  <component name="RunManager" selected="JUnit.RestAssuredExercises6Test.checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016">
     <configuration name="RestAssuredExamples.serializeAddressToJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-testing-practice_test" />
       <extension name="coverage">
@@ -655,22 +648,6 @@
       <option name="PACKAGE_NAME" value="exercises" />
       <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises5Test" />
       <option name="METHOD_NAME" value="checkFourRecordsHaveBeenSetByCarsFromEitherItalyOrGermany" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestAssuredExercises5Test.checkThreeRecordsHaveBeenSetByCarsFromTheUK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-testing-practice_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="exercises" />
-      <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises5Test" />
-      <option name="METHOD_NAME" value="checkThreeRecordsHaveBeenSetByCarsFromTheUK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -708,20 +685,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestAssuredExercises6Test.checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-testing-practice_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exercises" />
+      <option name="MAIN_CLASS_NAME" value="exercises.RestAssuredExercises6Test" />
+      <option name="METHOD_NAME" value="checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.RestAssuredExercises5Test.checkThreeRecordsHaveBeenSetByCarsFromTheUK" />
       <item itemvalue="JUnit.RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz" />
       <item itemvalue="JUnit.RestAssuredExercises5Test.checkFourRecordsHaveBeenSetByCarsFromEitherItalyOrGermany" />
       <item itemvalue="JUnit.RestAssuredExercises6Test.checkThatPostingA2012FordFocusReturnsHttp200" />
       <item itemvalue="JUnit.RestAssuredExamples.serializeAddressToJson" />
+      <item itemvalue="JUnit.RestAssuredExercises6Test.checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RestAssuredExercises6Test.checkThatRetrievingAnAlfaRomeoGiuliaShowsModelYear2016" />
         <item itemvalue="JUnit.RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz" />
         <item itemvalue="JUnit.RestAssuredExercises6Test.checkThatPostingA2012FordFocusReturnsHttp200" />
         <item itemvalue="JUnit.RestAssuredExamples.serializeAddressToJson" />
         <item itemvalue="JUnit.RestAssuredExercises5Test.checkFourRecordsHaveBeenSetByCarsFromEitherItalyOrGermany" />
-        <item itemvalue="JUnit.RestAssuredExercises5Test.checkThreeRecordsHaveBeenSetByCarsFromTheUK" />
       </list>
     </recent_temporary>
   </component>
@@ -735,14 +728,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532917126610</updated>
-      <workItem from="1532917130449" duration="22480000" />
+      <workItem from="1532917130449" duration="23140000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestAssuredExercises5Test_checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz - 2018.07.30 at 19h 47m 14s.xml">
-      <configuration name="RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RestAssuredExercises5Test_checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz - 2018.07.30 at 19h 47m 23s.xml">
       <configuration name="RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz" configurationId="JUnit" />
     </history-entry>
@@ -770,9 +760,12 @@
     <history-entry file="RestAssuredExercises6Test_checkThatPostingA2012FordFocusReturnsHttp200 - 2018.07.30 at 20h 12m 37s.xml">
       <configuration name="RestAssuredExercises6Test.checkThatPostingA2012FordFocusReturnsHttp200" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RestAssuredExercises5Test_checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz - 2018.07.30 at 20h 18m 19s.xml">
+      <configuration name="RestAssuredExercises5Test.checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22480000" />
+    <option name="totallyTimeSpent" value="23140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -783,7 +776,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" />
@@ -793,7 +786,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1053,17 +1046,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="321">
+          <caret line="97" column="40" lean-forward="true" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises5Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/exercises/RestAssuredExercises6Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="99" column="46" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
+        <state relative-caret-position="387">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
