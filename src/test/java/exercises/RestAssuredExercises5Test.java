@@ -64,11 +64,10 @@ public class RestAssuredExercises5Test {
 	
 	@Test
 	public void checkThreeRecordsHaveBeenSetByCarsFromTheUK() {
-		
-		given().
-			spec(requestSpec).
-		when().
-		then();
+		given().spec(requestSpec).
+		when().get("/xml/speedrecords").
+		then().assertThat().
+				body("cars.car.findAll{it.@country == 'UK'}.size()", equalTo(3));
 	}
 	
 	/*******************************************************
@@ -80,11 +79,10 @@ public class RestAssuredExercises5Test {
 	
 	@Test
 	public void checkFourRecordsHaveBeenSetByCarsFromEitherItalyOrGermany() {
-		
-		given().
-			spec(requestSpec).
-		when().
-		then();
+		given().spec(requestSpec).
+		when().get("/xml/speedrecords").
+		then().assertThat().
+				body("cars.car.findAll{it.@country=='Japan'}.size()", equalTo(4));
 	}
 	
 	/*******************************************************
@@ -96,10 +94,9 @@ public class RestAssuredExercises5Test {
 	
 	@Test
 	public void checkTwoRecordsHaveBeenSetByCarsWhoseMakeEndOnBenz() {
-		
-		given().
-			spec(requestSpec).
-		when().
-		then();
+		given().spec(requestSpec).
+		when().get("/xml/speedrecords").
+		then().assertThat().
+				body("cars.car.@make.ends(~/Benz/).size()", equalTo(2));
 	}
 }
