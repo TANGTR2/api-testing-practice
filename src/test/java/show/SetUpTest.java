@@ -49,7 +49,7 @@ public class SetUpTest {
                 and().
                 contentType(ContentType.JSON).assertThat()
                 .body("data", hasItems("4845"))
-                .body("data[4]", is("4842"))
+                .body("data[4]", is("4844"))
                 .body("data.size()", is(10));
 
 

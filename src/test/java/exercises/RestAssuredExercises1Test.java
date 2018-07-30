@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static javax.swing.UIManager.get;
 
 
 public class RestAssuredExercises1Test {
@@ -32,8 +33,8 @@ public class RestAssuredExercises1Test {
 
         given().
                 spec(requestSpec).
-                when().
-                then();
+                when().get("/2016/drivers.json").
+                then().assertThat().statusCode(200);
     }
 
     /*******************************************************
