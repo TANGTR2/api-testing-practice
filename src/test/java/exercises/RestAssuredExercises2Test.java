@@ -4,8 +4,15 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 
 public class RestAssuredExercises2Test {
@@ -31,6 +38,27 @@ public class RestAssuredExercises2Test {
 
 	//todo
 
+	static Stream<Arguments> circuitCountryProvider() {
+		return Stream.of(
+				Arguments.of("monza", "Italy"),
+				Arguments.of("spa", "Belgium")
+		);
+	}
+
+	@ParameterizedTest
+	@MethodSource("circuitCountryProvider")
+	public void checkCountryForCircuit(String circuitId, String country) {
+
+		given().
+				spec(requestSpec).
+				pathParam("circuit", circuitId).
+				when().
+				get("circuits/{circuit}.json").
+				then().log().all().
+				assertThat().
+				body("MRData.CircuitTable.Circuits[0].Location.country", equalTo(country));
+	}
+
 	/*******************************************************
 	 * Use junit-jupiter-params for @ParameterizedTest that specifies for all races
 	 * (adding the first four suffices) in 2015 how many  
@@ -51,8 +79,8 @@ public class RestAssuredExercises2Test {
 		
 		given().
 			spec(requestSpec).
-		when().
-		then();
+				when().
+				then();
 	}
 	
 	/*******************************************************
