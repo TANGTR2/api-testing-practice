@@ -80,8 +80,8 @@ public class RestAssuredExercises1Test {
 
         given().
                 spec(requestSpec).
-                when().
-                then();
+                when().get("/2014/1/circuits.json").
+                then().log().all().body("MRData.CircuitTable.Circuits[0].circuitId",is("albert_park"));
     }
 
     /***********************************************
