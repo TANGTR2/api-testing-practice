@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static javax.swing.UIManager.get;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 
 
 public class RestAssuredExercises1Test {
@@ -112,8 +110,7 @@ public class RestAssuredExercises1Test {
 
         given().
                 spec(requestSpec).
-                when().
-
-                then();
+                when().get("/2014/circuits.json").
+                then().log().all().body(not(containsString("nurburgring")));
     }
 }
