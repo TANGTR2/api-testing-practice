@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static javax.swing.UIManager.get;
+import static org.hamcrest.Matchers.is;
 
 
 public class RestAssuredExercises1Test {
@@ -47,8 +48,8 @@ public class RestAssuredExercises1Test {
 
         given().
                 spec(requestSpec).
-                when().
-                then();
+                when().get("/incorrect.json").
+                then().assertThat().statusCode(404);
     }
 
     /*******************************************************
