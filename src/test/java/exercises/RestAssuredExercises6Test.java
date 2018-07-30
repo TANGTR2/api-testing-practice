@@ -58,7 +58,7 @@ public class RestAssuredExercises6Test {
 		given().
 				spec(requestSpec).
 		when().log().all().
-				get("/cars/getcar/alfaromeogiulia");
+				get("/car/getcar/alfaromeogiulia");
 
 		// Put your assert here
 	}
