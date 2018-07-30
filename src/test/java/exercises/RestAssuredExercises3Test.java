@@ -23,7 +23,7 @@ public class RestAssuredExercises3Test {
 
         createRequestSpecification();
         createResponseSpecification();
-//        getNinthDriverId();
+        getNinthDriverId();
     }
 
     static void createRequestSpecification() {
@@ -65,15 +65,15 @@ public class RestAssuredExercises3Test {
 
     private static String ninthDriverId;
 
-//    static void getNinthDriverId() {
-//        ninthDriverId = given().
-//                spec(requestSpec).
-//                when().
-//                get("/2016/drivers.json").
-//                then().
-//                extract().
-//                path("drivers/vettel.json");
-//    }
+    static void getNinthDriverId() {
+        ninthDriverId = given().
+                spec(requestSpec).
+                when().
+                get("/2016/drivers.json").
+                then().
+                extract().
+                path("MRData.DriverTable.Drivers[8].driverId");
+    }
 
     /*******************************************************
      * Retrieve the circuit data for the first race in 2014
@@ -106,8 +106,12 @@ public class RestAssuredExercises3Test {
     public void useExtractedDriverId() {
 
         given().
+                pathParam("driverId", ninthDriverId).
                 spec(requestSpec).
-                when().
-                then();
+                when().get("/drivers/{driverId}.json").
+                then().log().all().
+                assertThat().
+                body("MRData.DriverTable.Drivers[0].nationality", is("German"));
+        ;
     }
 }
