@@ -67,6 +67,29 @@ public class RestAssuredExercises2Test {
 	 ******************************************************/
 
 	//todo
+	static Stream<Arguments> racePitstopProvider() {
+		return Stream.of(
+				Arguments.of("1", 1),
+				Arguments.of("2", 3),
+				Arguments.of("3", 2),
+				Arguments.of("4", 2)
+		);
+	}
+
+	@ParameterizedTest
+	@MethodSource("racePitstopProvider")
+	public void checkNumberOfPitstopsForMaxVerstappenIn2015(String round, Integer pitstops) {
+
+		given().
+				spec(requestSpec).
+				pathParam("round", round).
+				when().
+				get("/2015/{round}/drivers/max_verstappen/pitstops.json").
+				then().log().all().
+				assertThat().
+				body("MRData.RaceTable.Races[0].PitStops.size()", equalTo(pitstops));
+	}
+
 
 	/*******************************************************
 	 * Request data for a specific circuit (for Monza this 
@@ -74,14 +97,14 @@ public class RestAssuredExercises2Test {
 	 * and check the country this circuit can be found in
 	 ******************************************************/
 	
-	@Test
-	public void checkCountryForCircuit() {
-		
-		given().
-			spec(requestSpec).
-				when().
-				then();
-	}
+//	@Test
+//	public void checkCountryForCircuit() {
+//
+//		given().
+//			spec(requestSpec).
+//				when().
+//				then();
+//	}
 	
 	/*******************************************************
 	 * Request the pitstop data for the first four races in
@@ -90,12 +113,12 @@ public class RestAssuredExercises2Test {
 	 * and verify the number of pit stops made
 	 ******************************************************/
 	
-	@Test
-	public void checkNumberOfPitstopsForMaxVerstappenIn2015() {
-		
-		given().
-			spec(requestSpec).
-		when().
-		then();
-	}
+//	@Test
+//	public void checkNumberOfPitstopsForMaxVerstappenIn2015() {
+//
+//		given().
+//			spec(requestSpec).
+//		when().
+//		then();
+//	}
 }
