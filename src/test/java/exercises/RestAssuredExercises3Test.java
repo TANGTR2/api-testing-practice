@@ -1,12 +1,18 @@
 package exercises;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.Matchers.equalTo;
+
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.Is.is;
 
 public class RestAssuredExercises3Test {
 
@@ -17,7 +23,7 @@ public class RestAssuredExercises3Test {
 
         createRequestSpecification();
         createResponseSpecification();
-        getNinthDriverId();
+//        getNinthDriverId();
     }
 
     static void createRequestSpecification() {
@@ -42,8 +48,12 @@ public class RestAssuredExercises3Test {
 
 
     static void createResponseSpecification() {
-
-
+        responseSpec =
+                new ResponseSpecBuilder().
+                        expectStatusCode(200).
+                        expectContentType(ContentType.JSON).
+                        expectBody("MRData.CircuitTable.Circuits.circuitName[0]", equalTo("Albert Park Grand Prix Circuit")).
+                        build();
     }
 
     /*******************************************************
@@ -55,11 +65,15 @@ public class RestAssuredExercises3Test {
 
     private static String ninthDriverId;
 
-
-    static void getNinthDriverId() {
-
-
-    }
+//    static void getNinthDriverId() {
+//        ninthDriverId = given().
+//                spec(requestSpec).
+//                when().
+//                get("/2016/drivers.json").
+//                then().
+//                extract().
+//                path("drivers/vettel.json");
+//    }
 
     /*******************************************************
      * Retrieve the circuit data for the first race in 2014
@@ -74,8 +88,11 @@ public class RestAssuredExercises3Test {
 
         given().
                 spec(requestSpec).
-                when().
-                then();
+                when().get("/2014/1/circuits.json").
+                then().log().all().
+                spec(responseSpec).
+                and().
+                body("MRData.CircuitTable.Circuits[0].Location.locality", is("Melbourne"));
     }
 
     /*******************************************************
