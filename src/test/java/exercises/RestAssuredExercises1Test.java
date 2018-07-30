@@ -1,12 +1,14 @@
 package exercises;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static javax.swing.UIManager.get;
+import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
 
@@ -62,8 +64,8 @@ public class RestAssuredExercises1Test {
 
         given().
                 spec(requestSpec).
-                when().
-                then();
+                when().log().all().get("/2016/drivers.json").
+                then().log().all().contentType(ContentType.JSON);
     }
 
     /***********************************************
